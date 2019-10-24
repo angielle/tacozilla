@@ -1,0 +1,619 @@
+* { margin: 0; padding: 0; }
+html {
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  margin: auto;
+  width: 1960px;
+  max-width: 100%;
+}
+
+a {
+  transition: all .3s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.heading {
+  color: #FFAF6C;
+  font-family: Lobster;
+  font-size: 80px;
+  text-shadow:
+    -2px  2px 0 #A5040F,  
+     2px -2px 0 #A5040F,
+    -2px  2px 0 #A5040F,
+     2px  2px 0 #A5040F;
+  /* -webkit-text-stroke: 3px #009034; */
+  text-combine-upright: none;
+  text-combine-upright: all;
+  letter-spacing: 5px;
+}
+
+.subheading {
+  color: #ffffff;
+  font-family: Poppins;
+  filter: drop-shadow(30px 10px 4px #000000);
+  font-size: 20px;
+}
+
+.section-title {
+  font-family: Oswald;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.link {
+  color: #ffffff;
+  font-family: Oswald;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.food-title-label {
+  font-family: Oswald;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.food-title {
+  font-family: Lobster;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0px 0px 20px 0px;
+}
+
+.body {
+  color: #131252;
+  font-family: Poppins;
+  font-size: 17px;
+}
+
+
+.footer-title {
+  font-family: Oswald;
+  font-size: 20px;
+  color: #000000;
+}
+
+.footer-body {
+  font-family: Poppins;
+  font-size: 15px;
+  color: #000000;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.flex-row {
+  align-items: center;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+
+#header {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+/* #banner:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background-image: url(images/triangle.png);
+  background-size: contain;
+  background-position: center;
+} */
+
+
+#header .container {
+  width: auto;
+  flex-grow: 1;
+}
+
+#header .container  .row .item {
+  text-align: center;
+}
+
+#header .container .row .item img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header .container .row ul {
+  list-style-type: none;
+}
+
+#header .container .row ul li {
+  margin-top: 10px;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+#header .container  .row ul li a {
+  padding: 0; 
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+#header .container .row ul li a:hover {
+  color: #EB332C;
+  transition: 0.7s; 
+}
+
+#header .header-container .banner-container .taco-button h7 {
+  color: #ffffff;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  transform: translate(25%, 12%);
+}
+
+#header .header-container .icon-container span .fa-facebook {
+  z-index: 1;
+  position: absolute;
+  left: 10px;
+  top: 150px;
+}
+
+#header .header-container .icon-container span .fa-instagram {
+  z-index: 1;
+  position: absolute;
+  left: 10px;
+  top: 180px;
+}
+
+#header .flag-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#header .flag-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+/* ------------------------------------------ 
+ BANNER
+-------------------------------------------*/
+
+#banner {
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 750px;  
+  height: 100%;
+}
+
+#banner .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 750px;
+}
+
+#banner .container .banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#banner .container .banner-container .taco-button { 
+  background: no-repeat scroll 0 0 transparent;
+  background-position: center left 18px;
+  background-size: 130px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 500;
+  height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  transition: all 0.3s; 
+}
+
+#banner .container .taco-button:hover { 
+  cursor: pointer;
+  transform: rotate(-5deg) scale(1.1);
+}
+
+
+/* ------------------------------------------ 
+ ABOUT SECTION
+-------------------------------------------*/
+
+#about { 
+  min-height: 500px;
+  height: 75%;
+  background-position: center left, top right, top right, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 250px auto, 460px auto, 280px auto, 700px auto;
+}
+
+#about .container {
+  display: flex;
+  align-items: center;;
+  height: 500px;
+  padding: 0 200px;
+}
+#about .container p {
+  color: #EB332C;
+  font-family: Poppins;
+  font-size: 18px;
+  text-align: left;
+}
+
+#about .container .about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#about .container .about-container p {
+  padding-top: 30px;
+}
+
+#about .container .about-container .taco-button {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: transparent;
+  background-position: center left 19px;
+  background-size: 130px;
+  border: none;
+  color: #151253;
+  cursor: pointer;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 500;
+  height: 100px;
+  text-align: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  transition: all 0.3s;
+}
+
+#about .container .about-container .taco-button:hover { 
+  cursor: pointer;
+  transform: rotate(7deg) scale(1.1);
+}
+
+#about .container .about-container .about-taco-button h7 {
+  color: #151253;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  transform: translate(25%, 30%);
+}
+
+
+#about .container .about-container .hdstyle {
+ text-align: left;
+}
+
+
+/* ------------------------------------------ 
+ FEATURED SECTION
+-------------------------------------------*/
+
+ #featured {
+  padding: 20px;
+  background-color: #FFE8E0;
+  position: relative;
+  background-image: url(images/misc/maracas-top.png), url(images/misc/maracas-bottom.png);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 200px auto, 200px auto;
+}
+
+#featured .featured-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+
+}
+
+#featured .featured-container .grid-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+}
+
+#featured .featured-container .grid-container .grid {
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+
+#featured .featured-image .fake-image {
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#featured .featured-container .grid-container .grid .chicken-taco,
+#featured .featured-container .grid-container .grid .quesadilla {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#featured .featured-container .grid-container .grid .chicken-taco .chicken-taco-desc {
+  align-items: center;
+  background-image: url(images/misc/decor-2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 450px auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+} 
+
+#featured .featured-container .grid-container .grid .quesadilla .quesadilla-desc {
+  align-items: center;
+  background-image: url(images/misc/decor-3.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 450px auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+} 
+
+#featured .featured-container .grid .chicken-taco .chicken-taco-desc p, 
+#featured .featured-container .grid .quesadilla .quesadilla-desc p {
+  padding: 0px 40px;
+}  
+
+#featured .featured-container .grid-container .grid .chicken-taco-desc, .chicken-taco-img,
+#featured .featured-container .grid-container .grid .quesadilla-desc, .quesadilla-img {
+  flex-basis: 0;
+  flex-grow: 1;
+  position: relative;
+}
+
+#featured .featured-container .grid-container .grid .chicken-taco-desc .taco-button {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: transparent;
+  background-position: center left 19px;
+  background-size: 130px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 500;
+  height: 100px;
+  text-align: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  transition: all 0.3s;
+}
+
+#featured .featured-container .grid-container .grid .chicken-taco-desc .taco-button:hover {
+  cursor: pointer;
+  transform: rotate(-5deg) scale(1.1);
+}
+
+#featured .featured-container .grid-container .grid .chicken-taco-img .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(248, 4, 9, 0.8);
+}
+
+#featured .featured-container .grid-container .grid .quesadilla-img .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(235, 172, 57, 0.8);
+}
+
+#featured .featured-container .grid-container .grid .chicken-taco-img .overlay p,
+#featured .featured-container .grid-container .grid .quesadilla-img .overlay p {
+  color: white;
+  font-size: 20px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+#featured .featured-container .grid-container .grid .chicken-taco-img .overlay .fas {
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  font-size: 30px;
+  color: #ffffff;
+  transition: all .3s .3s;
+}
+
+#featured .featured-container .grid-container .grid .chicken-taco-img:hover .overlay,
+#featured .featured-container .grid-container .grid .quesadilla-img:hover .overlay {
+  opacity: 1
+}
+
+
+
+/* ------------------------------------------ 
+ RESERVATIONS SECTION
+-------------------------------------------*/
+
+#reservations { 
+  background-size: cover;
+  height: 400px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#reservations .container  {
+  align-items: center;
+  height: 100%;
+}
+
+#reservations .container .reservations-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#reservations .container .reservations-container h2 {
+  font-family: Oswald;
+  color: #ffffff;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#reservations .container .reservations-container p {
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 18px;
+  text-align: center;
+  margin: 0px 200px;
+  padding: 10px 0px;
+}
+
+#reservations .container .reservations-container .taco-button { 
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: transparent;
+  background-position: center left 19px;
+  background-size: 130px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Oswald;
+  font-size: 18px;
+  font-weight: 500;
+  height: 100px;
+  text-align: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  transition: all 0.3s;
+}
+
+#reservations .container .reservations-container .taco-button:hover { 
+  cursor: pointer;
+  transform: rotate(7deg) scale(1.1);
+}
+
+
+/* ------------------------------------------ 
+ FOOTER SECTION
+-------------------------------------------*/
+
+#footer {
+  background-color: #ECAC3B;
+  position: relative;
+  padding: 20px 0px;
+}
+
+#footer .container {
+  width: 1960px;
+  max-width: 100%;
+}
+
+#footer .container:before {
+  content: '';
+  height: 14px;
+  background-image: url(images/yellow-triangle.png);
+  background-size: contain;
+  background-position: top center;
+  position: absolute;
+  top: -34px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#footer .pattern {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+#footer .container .row .contact a {
+  color: #000000;
+}
+
+#footer .container .row .contact .phone {
+  display: flex;
+  flex-direction: row;
+}
+
+#footer .container .row .contact .mail {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+#footer .container .row .mail, #footer .container .row .phone {
+  padding-top: 10px;
+}
