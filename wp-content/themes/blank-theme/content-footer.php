@@ -9,13 +9,14 @@
 
 <?php 
   $logo = get_field('logo');
+  $footer_pattern = get_field('footer_pattern');
 ?>
 
+<section id="footer-pattern" style="background-image: url(<?php echo $footer_pattern ?>)">
+</section>
 
 <footer id="footer" class="site-footer" role="contentinfo">
-
     <div class="container">
-
         <div class="row">
           <div class="col-sm-3 text-center">
             <img src="<?php echo $logo ?>" width="150" />

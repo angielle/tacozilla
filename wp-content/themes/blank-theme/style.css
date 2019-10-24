@@ -569,6 +569,14 @@ a:hover, a:focus {
  FOOTER SECTION
 -------------------------------------------*/
 
+#footer-pattern {
+  content: '';
+  height: 14px;
+  background-size: contain;
+  background-position: top center;
+  margin-top: -14px;
+}
+
 #footer {
   background-color: #ECAC3B;
   position: relative;

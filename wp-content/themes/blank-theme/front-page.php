@@ -122,6 +122,4 @@ get_header();
 </section>
 <div class="clearfix"></div>
 
-<div class="footer-pattern"></div> 
-
 <?php get_footer(); ?>
