@@ -369,7 +369,6 @@ a:hover, a:focus {
 
 #featured .featured-container .grid-container .grid .chicken-taco .chicken-taco-desc {
   align-items: center;
-  background-image: url(images/misc/decor-2.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 450px auto;
@@ -384,7 +383,6 @@ a:hover, a:focus {
 
 #featured .featured-container .grid-container .grid .quesadilla .quesadilla-desc {
   align-items: center;
-  background-image: url(images/misc/decor-3.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 450px auto;

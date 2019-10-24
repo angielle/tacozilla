@@ -31,6 +31,8 @@ get_header();
   $maracas_bottom = get_field('maracas_bottom');
   $chicken_taco = get_field('chicken_taco');
   $quesadilla = get_field('quesadilla');
+  $chicken_taco_decor = get_field('chicken_taco_decor');
+  $quesadilla_decor = get_field('quesadilla_decor');
   $taco_violet_button = get_field('taco_violet_button');
   $nachos = get_field('nachos');
   $taco_white_outline_button = get_field('taco_white_outline_button');
@@ -62,13 +64,13 @@ get_header();
   </div>
 </section>
 
-<section id="featured" style=" background-image: url(<?php echo $maracas_top ?>), url(<?php echo $maracas_bottom ?>);">
+<section id="featured" style="background-image: url(<?php echo $maracas_top ?>), url(<?php echo $maracas_bottom ?>);">
   <div class="featured-container">
     <h1 class="section-title" style="color: #EB332C; text-align: center">Featured</h1>
     <div class="grid-container">
       <div class="grid">
         <div class="chicken-taco" style="positon: relative;">
-          <div class="chicken-taco-desc">
+          <div class="chicken-taco-desc" style="background-image: url(<?php echo $chicken_taco_decor ?>)">
             <div>
               <h5 class="food-title-label" style="color: #AD0410">Our Bestseller</h5>
               <h3 class="food-title" style="color: #AD0410">Chicken Taco</h5>
@@ -100,7 +102,7 @@ get_header();
               <p>View other new additions</p>
             </div>
           </div>
-          <div class="quesadilla-desc" style="position: relative" >
+          <div class="quesadilla-desc" style="background-image: url(<?php echo $quesadilla_decor ?>" >
             <h5 class="food-title-label" style="color: #EBAC39">Newest Addition</h5>
             <h3 class="food-title" style="color: #EBAC39">Quesadilla</h5>
             <p class="body">Take a delight with our quesadilla with gooey melted cheese and a flavorful fajita style chicken and pepper filling. Our quesadilla is the perfect appetizer for every meal.</p>
