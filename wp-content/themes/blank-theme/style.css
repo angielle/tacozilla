@@ -327,7 +327,6 @@ a:hover, a:focus {
   padding: 20px;
   background-color: #FFE8E0;
   position: relative;
-  background-image: url(images/misc/maracas-top.png), url(images/misc/maracas-bottom.png);
   background-position: top left, bottom right;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 200px auto, 200px auto;
@@ -581,26 +580,6 @@ a:hover, a:focus {
   width: 1960px;
   max-width: 100%;
 }
-
-#footer .container:before {
-  content: '';
-  height: 14px;
-  background-image: url(images/yellow-triangle.png);
-  background-size: contain;
-  background-position: top center;
-  position: absolute;
-  top: -34px;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-#footer .pattern {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
 #footer .container .row .contact a {
   color: #000000;
 }
