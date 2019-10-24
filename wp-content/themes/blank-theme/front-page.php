@@ -34,18 +34,22 @@ get_header();
   $taco_violet_button = get_field('taco_violet_button');
   $nachos = get_field('nachos');
   $taco_white_outline_button = get_field('taco_white_outline_button');
+  $banner_pattern= get_field('banner_pattern');
 ?>
 
-  <section id="banner" style="background: linear-gradient(#000000, transparent), url(<?php echo $banner ?>)">
-    <div class="container">
-      <div class="banner-container">
-        <img src="<?php echo $banner_text ?>" style="width: 1100px"  />
-        <h5 class="subheading text-center"><?php echo $tagline ?></h5>
-        <input type="button" name="button" value="Menu" class="taco-button" style="background-image: url(<?php echo $taco_orange_button ?>)"/>
-      </div>
+<section id="banner" style="background: linear-gradient(#000000, transparent), url(<?php echo $banner ?>)">
+  <div class="container">
+    <div class="banner-container">
+      <img src="<?php echo $banner_text ?>" style="width: 1100px"  />
+      <h5 class="subheading text-center"><?php echo $tagline ?></h5>
+      <input type="button" name="button" value="Menu" class="taco-button" style="background-image: url(<?php echo $taco_orange_button ?>)"/>
     </div>
-  </section>
-  <div class='clearfix'></div>
+  </div>
+</section>
+<div class='clearfix'></div>
+
+<section id="banner-pattern" style="background-image: url(<?php echo $banner_pattern ?>)">
+</section>
 
 <section id="about" style="background-image: url(<?php echo $about_plate_left ?>), url(http://localhost/tacozilla/wp-content/uploads/2019/10/flag-about-2.png), url(<?php echo $about_plate_right ?>), url(<?php echo $about_decor ?>);">
   <div class="container">
