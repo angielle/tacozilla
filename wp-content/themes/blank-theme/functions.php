@@ -27,7 +27,8 @@ if ( ! function_exists( '_cad_theme_setup' ) ) :
          * Common Navigation Location
          */
         register_nav_menus( array(
-            'header-navigation' => __( 'Header Navigation' ),
+            'header-navigation-left' => __( 'Header Navigation (Left)' ),
+            'header-navigation-right' => __( 'Header Navigation (Right)' ),
             'footer-navigation' => __( 'Footer Navigation' ),
             'sidebar-navigation' => __( 'Sidebar Navigation' )
         ));
@@ -51,6 +52,7 @@ endif;
 add_action( 'after_setup_theme', '_cad_theme_setup' );
 
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
 
 
 $defaults = array(
@@ -120,3 +122,4 @@ require get_template_directory() . '/functions/wp_bootstrap_navwalker.php';
  * Meta for Sidebar
  */
 require get_template_directory() . '/functions/sidebar.php';
+

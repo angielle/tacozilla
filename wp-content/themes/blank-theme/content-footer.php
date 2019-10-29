@@ -9,7 +9,7 @@
 
 <?php 
   $logo = get_field('logo');
-  $footer_pattern = get_field('footer_pattern');
+  $footer_pattern = get_template_directory_uri()."/images/yellow-triangle.png";
 ?>
 
 <section id="footer-pattern" style="background-image: url(<?php echo $footer_pattern ?>)">
@@ -34,11 +34,11 @@
       <div class="col-sm-3 contact">
         <h6 class="footer-title">CONTACT</h6>
         <div class="phone">
-          <i class="fas fa-phone"></i>
+          <i class="fas fa-phone" style="margin-top: 4px;"></i>
           <p class="footer-body" style="margin-left: 10px;"><a href="tel:123-456-789">123-456-789</a></p>
         </div>
         <div class="mail">
-          <i class="far fa-envelope"></i>
+          <i class="far fa-envelope" style="margin-top: 4px;"></i>
           <p class="footer-body" style="margin-left: 10px;"><a href="mailto:info@tacozilla.com">info@tacozilla.com</a></p>
         </div>
       </div>

@@ -16,59 +16,69 @@
 <header>
   <div id='header'>
     <div class="container">
-        <!-- <img src="images/misc/flag-left.png" class="flag-left img-responsive" width="500" /> -->
-        <div class="row flex-row">
-          <div class="col-sm-4 item">
-            <ul>
-              <li>
-                <a href='#about' class='link'>About</a>
-              </li>    
-              <li>
-                <a href='#featured' class='link'>Featured</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-4 item">
-            <a href="#">
-              <img src="<?php header_image()?>" class="img-responsive" width="150" />
-            </a>
-          </div>
-          <div class="col-sm-4 item">
-            <ul>
-              <li>
-                <a href="#reservations" class="link">Reservations</a>
-              </li>  
-              <li>
-                <a href="#footer" class="link">Contact</a>
-              </li>  
-            </ul>
-          </div>
-        </div>  
-      </div>
-      <!-- <img src="images/misc/flag-right.png" class="flag-right img-responsive" width="500" /> -->
+      <div class="row flex-row">
+        
+        <div class="col-sm-4 item">
+          <?php 
+            $defaults = array( 
+              'theme_location'=> 'header-navigation-left', 
+              'menu' => 'header-navigation-left', 
+              'container' => false, 
+              'container_class' => '', 
+              'container_id' => '', 
+              'menu_class' => '', 
+              'menu_id' => '', 
+              'echo' => true, 
+              'before' => '', 
+              'after' => '', 
+              'link_before' => '', 
+              'link_after' => '', 
+              'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 
+              'depth' => 2, 
+              'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 
+              'walker' => new wp_bootstrap_navwalker()
+              ); 
+              wp_nav_menu( $defaults ); 
+            ?>      
+        </div>
+
+        <div class="col-sm-4 item">
+          <a class="site-logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home" title="<?php bloginfo('name'); ?>">
+            <?php if ( get_header_image() != '' ) { ?>
+            <img class="img-responsive" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo('name'); ?>" />
+            <?php } else { ?>
+            <?php bloginfo( 'name' ); ?>
+            <?php } ?>
+          </a>
+        </div>
+
+        <div class="col-sm-4 item">
+          <?php 
+            $defaults = array( 
+              'theme_location'=> 'header-navigation-right', 
+              'menu' => 'header-navigation-right', 
+              'container' => false, 
+              'container_class' => '', 
+              'container_id' => '', 
+              'menu_class' => '', 
+              'menu_id' => '', 
+              'echo' => true, 
+              'before' => '', 
+              'after' => '', 
+              'link_before' => '', 
+              'link_after' => '', 
+              'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 
+              'depth' => 2, 
+              'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 
+              'walker' => new wp_bootstrap_navwalker()
+              ); 
+              wp_nav_menu( $defaults ); 
+            ?>    
+        </div>
+
+      </div>  
+    </div>
   </div> 
   <div class='clearfix'></div>
 
-    <!--<?php 
-
-    $defaults = array( 
-        'theme_location'=> 'header-navigation', 
-        'menu' => 'header-navigation', 
-        'container' => false, 
-        'container_class' => '', 
-        'container_id' => '', 
-        'menu_class' => 'nav navbar-nav navbar-right', 
-        'menu_id' => '', 
-        'echo' => true, 
-        'before' => '', 
-        'after' => '', 
-        'link_before' => '', 
-        'link_after' => '', 
-        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 
-        'depth' => 2, 
-        'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 
-        'walker' => new wp_bootstrap_navwalker()
-        ); 
-        wp_nav_menu( $defaults ); 
-    ?>  -->
 </header>

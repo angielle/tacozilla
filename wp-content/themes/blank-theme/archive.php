@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying archive pages.
  *
@@ -9,89 +10,50 @@
  */
 
 get_header(); ?>
-    
-        <div class="container">
 
-            <?php if ( have_posts() ) : ?>
+<?php
+  $banner_img = (has_post_thumbnail()) ? get_the_post_thumbnail_url() : get_template_directory_uri() . "/images/";
+  $banner_pattern = get_template_directory_uri() . "/images/white-triangle.png";
+?>
 
-            <div class="page-header">
 
+<section id="inner-banner" style="background-image: linear-gradient(#000000, transparent), url(<?php echo $banner_img ?>)">
+  <div class="container">
+    <?php echo the_archive_title('<h1>', '</h1>'); ?>
+  </div>
+</section>
 
-                <?php 
-                $post = $posts[0]; 
-                // Hack. Set $post so that the_date() works. ?>
+<section id="banner-pattern" style="background-image: url(<?php echo $banner_pattern ?>)">
+</section>
 
-                <?php 
-                /* If this is a category archive */ 
-                if ( is_category() ) { ?>
-                <h1>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h1>
+<div class="container">
 
-                <?php 
-                /* If this is a tag archive */ 
-                } elseif( is_tag() ) { ?>
-                <h1>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h1>
+  <?php if (have_posts()) : ?>
 
-                <?php 
-                /* If this is a daily archive */ 
-                } elseif (is_day()) { ?>
-                <h1>Archive for <?php the_time('F jS, Y'); ?></h1>
+    <?php while (have_posts()) : the_post(); ?>
+      <div class="product">
+        <?php if (has_post_thumbnail()) { ?>
+          <a title="<?php the_title_attribute(); ?>">
+            <?php the_post_thumbnail('thumbnail', array('class' => 'img-thumbnail')); ?>
+          </<a>
+        <?php } ?>
+  
+        <a title="<?php the_title_attribute(); ?>">
+          <?php the_title("<h4>", "</h4>"); ?>
+        </a>
+      </div>
+    <?php endwhile; ?>
 
-                <?php 
-                /* If this is a monthly archive */ 
-                } elseif (is_month()) { ?>
-                <h1>Archive for <?php the_time('F, Y'); ?></h1>
+    <?php if (function_exists('wp_bootstrap_pagination')) wp_bootstrap_pagination(); ?>
 
-                <?php 
-                /* If this is a yearly archive */ 
-                } elseif (is_year()) { ?>
-                <h1>Archive for <?php the_time('Y'); ?></h1>
+  <?php else : ?>
 
-                <?php 
-                /* If this is an author archive */ 
-                } elseif (is_author()) { ?>
-                <h1>Author Archive</h1>
+    <h2>Nothing Found</h2>
 
-                <?php 
-                /* If this is a paged archive */ 
-                } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-                <h1>Blog Archives</h1>
+  <?php endif; ?>
 
-                <?php } ?> 
+</div>
 
-            </div><!-- .page-header -->
-
-            <?php while ( have_posts() ) : the_post(); ?>
-           
-                <?php if ( has_post_thumbnail() ) { ?>
-                <a class="pull-right" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                    <?php the_post_thumbnail('thumbnail', array('class' => 'img-thumbnail' )); ?>
-                </a>
-                <?php } ?>
-            
-                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                    <?php the_title("<h4>", "</h4>"); ?>
-                </a>
-
-                <?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-
-                <p> <?php the_excerpt(); ?></p>
-
-                <p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="btn btn-primary btn-xs"> Read More <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a></p>
-                
-                <div class="clearfix">&nbsp;</div>
-
-            <?php endwhile; ?>
-
-            <?php if ( function_exists('wp_bootstrap_pagination') ) wp_bootstrap_pagination(); ?>
-
-        <?php else : ?>
-
-            <h2>Nothing Found</h2>
-
-        <?php endif; ?>
-
-        </div>
-
-    <div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
 
 <?php get_footer(); ?>
