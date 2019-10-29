@@ -1,3 +1,7 @@
+:root {
+  --charcoal-black:  ‎#36454F;
+}
+
 * { 
   margin: 0; 
   padding: 0; 
@@ -35,6 +39,12 @@ a:hover, a:focus {
 .section-title {
   font-family: Oswald;
   font-size: 50px;
+  text-transform: uppercase;
+}
+
+.inner-page-title {
+  font-family: Oswald;
+  font-size: 30px;
   text-transform: uppercase;
 }
 
@@ -135,14 +145,6 @@ a:hover, a:focus {
   transition: 0.7s; 
 }
 
-#header .header-container .banner-container .taco-button h7 {
-  color: #ffffff;
-  font-family: Oswald;
-  font-size: 20px;
-  font-weight: 500;
-  position: absolute;
-  transform: translate(25%, 12%);
-}
 
 #header .header-container .icon-container span .fa-facebook {
   z-index: 1;
@@ -636,4 +638,113 @@ body:not(.home) #content-wrap .container {
   width: 150px;
   height: 150px;
   border-radius: 10px;
+}
+
+/* Reserve */
+#reserve-container {
+  margin: auto;
+}
+
+#reserve-container #date, 
+#reserve-container #time {
+  margin: 15px 0;
+  padding: 0px 10px;
+  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 2 0px;
+  display: inline-block;
+  box-sizing: border-box;
+  transition: 0.2s ease all;
+}
+
+
+/* Contact */
+.contact .contact-form form {
+	background: white;
+	border-radius: 10px;
+  color: var(--charcoal-black);
+	height: auto;
+	margin: 10% auto 0 auto;
+	width: 400px;
+	overflow: hidden;
+}
+
+.contact .contact-form form h1 {
+  margin-bottom: 40px;
+}
+
+.contact .contact-form form label {
+	font-size: 14px;
+	color: var(--charcoal-black);
+	cursor: pointer;
+}
+
+.contact .contact-form form label,
+.contact .contact-form form input,
+.contact .contact-form form textarea {
+	float: left;
+	clear: both;
+}
+
+.contact .contact-form form input,
+.contact .contact-form form textarea {
+	margin: 15px 0;
+	padding: 15px 10px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #bbb;
+	border-radius:2 0px;
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.2s ease all;
+  -moz-transition :0.2s ease all;
+  -ms-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.contact .contact-form form input:focus,
+.contact .contact-form form textarea:focus {
+	border-color: #151253;
+}
+
+.contact .contact-form form textarea {
+  resize: vertical;
+}
+
+.contact .contact-form .taco-button {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: transparent;
+  background-position: center left 19px;
+  background-size: 130px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 500;
+  height: 100px;
+  justify-content: center;;
+  text-align: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  transition: all 0.3s;
+}
+
+.contact .contact-form .taco-button:hover {
+  cursor: pointer;
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.contact .contact-info {
+  margin: 10% auto 0 auto;
+}
+
+.contact .contact-info .map {
+  width: 400px;
+  height: 400px;
 }

@@ -123,3 +123,4 @@ require get_template_directory() . '/functions/wp_bootstrap_navwalker.php';
  */
 require get_template_directory() . '/functions/sidebar.php';
 
+

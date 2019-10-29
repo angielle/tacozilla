@@ -18,26 +18,26 @@ get_header();
 ?>
 
 <?php
-$banner = get_field('banner');
-$banner_text = get_field('banner_text');
-$taco_orange_button = get_field('taco_orange_button');
-$tagline = get_field('tagline');
-$about = get_field('about');
-$about_plate_left = get_field('about_plate_left');
-$about_plate_right = get_field('about_plate_right');
-$about_decor = get_field('about_decor');
-$desc = get_field('description');
-$taco_violet_outline_button = get_field('taco_violet_outline_button');
-$maracas_top = get_field('maracas_top');
-$maracas_bottom = get_field('maracas_bottom');
-$chicken_taco = get_field('chicken_taco');
-$quesadilla = get_field('quesadilla');
-$chicken_taco_decor = get_field('chicken_taco_decor');
-$quesadilla_decor = get_field('quesadilla_decor');
-$taco_violet_button = get_field('taco_violet_button');
-$nachos = get_field('nachos');
-$taco_white_outline_button = get_field('taco_white_outline_button');
-$banner_pattern = get_field('banner_pattern');
+  $banner = get_field('banner');
+  $banner_text = get_field('banner_text');
+  $taco_orange_button = get_field('taco_orange_button');
+  $tagline = get_field('tagline');
+  $about = get_field('about');
+  $about_plate_left = get_field('about_plate_left');
+  $about_plate_right = get_field('about_plate_right');
+  $about_decor = get_field('about_decor');
+  $desc = get_field('description');
+  $taco_violet_outline_button = get_field('taco_violet_outline_button');
+  $maracas_top = get_field('maracas_top');
+  $maracas_bottom = get_field('maracas_bottom');
+  $chicken_taco = get_field('chicken_taco');
+  $quesadilla = get_field('quesadilla');
+  $chicken_taco_decor = get_field('chicken_taco_decor');
+  $quesadilla_decor = get_field('quesadilla_decor');
+  $taco_violet_button = get_field('taco_violet_button');
+  $nachos = get_field('nachos');
+  $taco_white_outline_button = get_field('taco_white_outline_button');
+  $banner_pattern = get_field('banner_pattern');
 ?>
 
 <section id="banner" style="background: linear-gradient(#000000, transparent), url(<?php echo $banner ?>)">
