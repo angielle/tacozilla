@@ -122,5 +122,3 @@ require get_template_directory() . '/functions/wp_bootstrap_navwalker.php';
  * Meta for Sidebar
  */
 require get_template_directory() . '/functions/sidebar.php';
-
-

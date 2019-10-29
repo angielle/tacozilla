@@ -659,7 +659,19 @@ body:not(.home) #content-wrap .container {
 
 
 /* Contact */
-.contact .contact-form form {
+.contact {
+  background-position: center left, top right, top right, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 250px auto, 460px auto, 280px auto, 700px auto;
+}
+
+.contact .post .row .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .post .row .contact-form form {
 	background: white;
 	border-radius: 10px;
   color: var(--charcoal-black);
@@ -669,25 +681,25 @@ body:not(.home) #content-wrap .container {
 	overflow: hidden;
 }
 
-.contact .contact-form form h1 {
+.contact .post .row .contact-form form h1 {
   margin-bottom: 40px;
 }
 
-.contact .contact-form form label {
+.contact .post .row .contact-form form label {
 	font-size: 14px;
 	color: var(--charcoal-black);
 	cursor: pointer;
 }
 
-.contact .contact-form form label,
-.contact .contact-form form input,
-.contact .contact-form form textarea {
+.contact .post .row .contact-form form label,
+.contact .post .row .contact-form form input,
+.contact .post .row .contact-form form textarea {
 	float: left;
 	clear: both;
 }
 
-.contact .contact-form form input,
-.contact .contact-form form textarea {
+.contact .post .row .contact-form form input,
+.contact .post .row .contact-form form textarea {
 	margin: 15px 0;
 	padding: 15px 10px;
 	width: 100%;
@@ -705,16 +717,16 @@ body:not(.home) #content-wrap .container {
   transition: 0.2s ease all;
 }
 
-.contact .contact-form form input:focus,
-.contact .contact-form form textarea:focus {
+.contact .post .row .contact-form form input:focus,
+.contact .post .row .contact-form form textarea:focus {
 	border-color: #151253;
 }
 
-.contact .contact-form form textarea {
+.contact .post .row .contact-form form textarea {
   resize: vertical;
 }
 
-.contact .contact-form .taco-button {
+.contact .post .row .contact-form .taco-button {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-color: transparent;
@@ -723,28 +735,24 @@ body:not(.home) #content-wrap .container {
   border: none;
   color: #ffffff;
   cursor: pointer;
+  display: block;
   font-family: Oswald;
   font-size: 20px;
   font-weight: 500;
   height: 100px;
   justify-content: center;;
-  text-align: center;
+  margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
   width: 200px;
   transition: all 0.3s;
 }
 
-.contact .contact-form .taco-button:hover {
+.contact .post .row .contact-form .taco-button:hover {
   cursor: pointer;
   transform: rotate(-5deg) scale(1.1);
 }
 
-.contact .contact-info {
-  margin: 10% auto 0 auto;
-}
-
-.contact .contact-info .map {
-  width: 400px;
-  height: 400px;
+.contact .post .row .contact-info .map {
+  margin: auto;
 }
