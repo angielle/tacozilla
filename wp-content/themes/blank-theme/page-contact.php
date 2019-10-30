@@ -36,7 +36,7 @@ get_header(); ?>
           <h1 class="inner-page-title" style="color: #EB332C; text-align: center">Send us a message</h1>
           
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name.." autocomplete="off" required="">
+          <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="off" required="">
 
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="off" required="">
@@ -50,7 +50,7 @@ get_header(); ?>
       </div>
       <div class="contact-info col-sm-6">
         <h1 class="inner-page-title" style="color: #EB332C; text-align: center">Visit Us</h1>
-        <img src="<?php echo $map ?>" class="map" />
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=calle%20uno%20baguio%20city&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://camzzle.com">enquiry</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:500px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:500px;}</style></div>
       </div>
     </div>
 

@@ -77,7 +77,7 @@ get_header();
               <h3 class="food-title" style="color: #AD0410">Chicken Taco</h5>
                 <p class="body">Our simple yet flavorful chicken tacos are perfect for dinner nights. These chicken thighs are marinated and grilled to perfection and served with corn tortillas.</p>
             </div>
-            <input type="button" name="button" value="Menu" class="taco-button" style="background-image: url(<?php echo $taco_violet_button ?>)" onclick="location.href=<?php echo get_site_url('', '/menu/'); ?>" />
+            <input type="button" name="button" value="Menu" class="taco-button" style="background-image: url(<?php echo $taco_violet_button ?>)" href="location.href=<?php echo get_site_url('', '/menu/'); ?>" />
           </div>
           <a class="chicken-taco-img" href="<?php echo get_site_url('', '/menu/'); ?>">
             <div class="featured-image" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -113,11 +113,7 @@ get_header();
     <div class="reservations-container">
       <h2>Reservations</h2>
       <p>Save time and save money! We accept reservations beforehand to save you time from waiting.</p>
-      <input type="button" name="button" value="Reserve" class="taco-button" style="background-image: url(<?php echo $taco_white_outline_button ?>)" />
-      <!-- <div class="taco-button">
-        <img src="svg/taco-white.svg" alt="accent" style="width: 130px"/>
-        <h7>INQUIRE</h7>
-      </div> -->
+      <input type="button" name="button" value="Reserve" class="taco-button" style="background-image: url(<?php echo $taco_white_outline_button ?>)" onclick="" />
     </div>
   </div>
 </section>
